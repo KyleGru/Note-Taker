@@ -1,4 +1,4 @@
-const router = requirer('express').Router();
+const router = require('express').Router();
 const { notes } = require('../../db/db');
 const { createNewNote, deleteNote } = require('../../helpers/fsUtils');
 
