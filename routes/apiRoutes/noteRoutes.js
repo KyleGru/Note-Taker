@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { notes } = require('../../db/db');
 const { createNewNote, deleteNote } = require('../../helpers/fsUtils');
+const { v4: uuidv4 } = require('uuid')
 
 router.get('/notes', (req, res) => {
     let saved = notes;
@@ -8,14 +9,16 @@ router.get('/notes', (req, res) => {
 });
 
 router.post('/notes', (req, res) => {
-    req.body.id = notes.length.toString();
-    let note = createNewNote(req.body, notes);
-    res.json(note)
+    console.log(req.body);
+    req.body.id = uuidv4();
+    let newNote = createNewNote(req.body, notes);
+    res.json(newNote)
 });
 
 router.delete('/notes/id:', (req, res) => {
     deleteNote(notes, req.params.id);
     res.json(notes);
+    console.log(notes);
 });
 
 module.exports = router;
