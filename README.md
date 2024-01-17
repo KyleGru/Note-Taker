@@ -3,6 +3,8 @@
 ## Description
  This Note Taker application allows the user to write and save notes. The front end was already created and I was tasked with the challenge of setting up the back end using Express.js to set up routes for the starter code to generate the app to Heroku. The routes that were set up allow the user to now enter notes and save them. When the user enters a new note it is written to the the db.json file effectively updating the list of current notes.  
 
+ This link will direct you to the deployed site on Heroku - https://kdg-note-taker-7dd751133ea6.herokuapp.com/notes
+
 ## Screenshots
 <img src="https://i.imgur.com/iWoRtoT.png" alt="Note Taker home page">
 <img src ="https://i.imgur.com/SuuT91r.png" alt="Note Taker List page">
